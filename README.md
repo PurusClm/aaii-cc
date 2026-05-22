@@ -1,7 +1,11 @@
 # Motivation
-AAI Industry is a great overhaul mod, giving extra challenges to early games, and provide some utilities like proccessed fuel and burner turbine which can come in handy sometimes even in to the late game. However, its recipe balancing is mainly intended for the base game (and probably SE); played with Space Age, especially with  planet mods, the difficulty added to the production lines can sometimes feel overwhelming, and the increased demand of resources can break the intended balancing on planets (for example, Cerys). This mod seeks to improve the said experience by introducing recipe re-balancing that scale down the general resource demand to a level slightly over the vanilla, implement compatability meausres, and while doing so, keep the special flavor of AAII as much as possible.
+
+AAI Industry is a great overhaul mod, giving extra challenges to early games, and provide some utilities like proccessed fuel and burner turbine which can come in handy sometimes even in to the late game. However, its recipe balancing is mainly intended for the base game (and probably SE); played with Space Age, especially with  planet mods, the difficulty added to the production lines can sometimes feel overwhelming, and the increased demand of resources can break the intended balancing on planets (for example, Cerys). 
+
+This mod seeks to improve the said experience by introducing recipe re-balancing that scale down the general resource demand to a level slightly over the vanilla, implement compatability meausres, and while doing so, keep the special flavor of AAII as much as possible.
 
 # Contents 
+
 Current features include:
 
 - Make small motor slightly cheaper, multi-cylinder engine and big motor much cheaper;
