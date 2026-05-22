@@ -1,0 +1,18 @@
+{
+  "name": "aaii-cc",
+  "version": "0.1.0",
+  "title": "AAI Industry - Constellational Customization",
+  "author": "Gnavianus",
+  "factorio_version": "2.0",
+  "dependencies": [
+    "base >= 2.0.0",
+    "? space-age >= 2.0.0",
+    "aai-industry >= 0.6.0",
+    "! aai-affordable-industry-patched",
+    "! aai-no-burner-fix",
+    "availability-sp",
+    "? lignumis >= 1.6.0",
+    "? wood-logistics >= 2.5.0"
+  ],
+  "description": "A.k.a. AAIICC, this mod contains tweaks to some recipes of AAI Industry, for a smoother experience when played with Space Age and planet mods."
+}
