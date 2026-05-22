@@ -24,4 +24,4 @@ Current features include:
 
 # Credit
 
-- Many ideas of this mod are inspired by [AAI no burner (forked)](https://mods.factorio.com/mod/aai-no-burner-fix) and [AAI affordable (forked)](https://mods.factorio.com/mod/aai-affordable-industry-patched) along with their original mods, but sadly I have mark them as incompat because they abuse final-fixes, breaking many other mods.
+- Many ideas of this mod are inspired by [AAI no burner (forked)](https://mods.factorio.com/mod/aai-no-burner-fix) and [AAI affordable (forked)](https://mods.factorio.com/mod/aai-affordable-industry-patched) along with their original mods, but sadly I have to mark them as incompat because they abuse final-fixes, breaking many other mods.
