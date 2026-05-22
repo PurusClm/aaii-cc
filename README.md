@@ -20,7 +20,7 @@ Current features include:
 
 - **Lignumis and Wooden Industry**: this mod does not alter wooden recipes (probably except some progression recipes of Lignumis). When cheaper upgrade is selected, AAI versions of burner inserter etc. will be backedup and limited to planets without wood.
 
-- **Muluna**: Muluna's native code only replace lubricant with carbon in its carbon electric engine recipe if lubricant is of a hard-coded amount (15 for vanilla, 40 for AAI). This mod instead utilize a automatic calculation, converting lubricant to 1/15 carbon (rounded up).
+- **Muluna**: Muluna's native code only replace lubricant with carbon in its carbon electric engine recipe if lubricant is of a hard-coded amount (15 for vanilla, 40 for AAI). This mod instead utilize an automatic calculation, converting lubricant to 1/15 carbon (rounded up).
 
 # Credit
 
