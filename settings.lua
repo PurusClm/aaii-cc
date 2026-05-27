@@ -111,5 +111,12 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "c[concrete]"
+    },
+    {
+        type = "bool-setting",
+        name = "aaii-cc-remove-board",
+        setting_type = "startup",
+        default_value = true,
+        order = "c[board]"
     }
 })
