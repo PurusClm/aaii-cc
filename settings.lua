@@ -1,3 +1,5 @@
+---- Motor & Engine
+
 data:extend({
     {
         type = "bool-setting",
@@ -33,7 +35,12 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "a[mining]"
-    },
+    }
+})
+
+---- burners
+
+data:extend({
     {
         type = "string-setting",
         name = "aaii-cc-furnace-mode",
@@ -83,7 +90,12 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "b-b"
-    },
+    }
+})
+
+---- Recipe Review
+
+data:extend({
     {
         type = "bool-setting",
         name = "aaii-cc-belt",
@@ -118,5 +130,30 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "c[board]"
+    }
+})
+
+---- Machine Buffing
+
+data:extend({
+    {
+        type = "string-setting",
+        name = "aaii-cc-furnace-buff",
+        setting_type = "startup",
+        allowed_values = {
+            "4-0",
+            "6-0",
+            "4-0.25",
+            "3-0.5"
+        },
+        default_value = "4-0.25",
+        order = "d[furnace]"
+    },
+    {
+        type = "bool-setting",
+        name = "aaii-cc-drill-buff",
+        setting_type = "startup",
+        default_value = true,
+        order = "d[drill]"
     }
 })
