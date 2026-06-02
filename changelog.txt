@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2026-06-02
+  Changes:
+    - Undo the old Lignumis compat code which change electronic corcuit in AAI loader recipe to basic circuit boards.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2026-06-02
   Changes:
