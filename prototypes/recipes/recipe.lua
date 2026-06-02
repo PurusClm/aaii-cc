@@ -1,3 +1,5 @@
+local meld = require("meld")
+
 ---- Basics
 
 local recipes = data.raw["recipe"]
@@ -12,7 +14,7 @@ end
 
 local recipe_backup = {}
 
---- Motor
+---- Motor
 
 if startups("emotor") then
     recipes["electric-motor"].ingredients = {

@@ -155,5 +155,12 @@ data:extend({
         setting_type = "startup",
         default_value = true,
         order = "d[drill]"
+    },
+    {
+        type = "bool-setting",
+        name = "aaii-cc-early-tech",
+        setting_type = "startup",
+        default_value = true,
+        order = "d[tech]"
     }
 })

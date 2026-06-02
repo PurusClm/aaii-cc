@@ -1,55 +1,49 @@
-if not settings.startup["aaii-cc-burner-backup"] then return end
-
----- Finally, we make backup recipes unlocked together with the main recipe.
-
-local recipe_backup = AAIICC.recipe_backup
-
--- Before we begin, eliminate recipes that is unlocked from the beginning.
-
-for k, recipe in ipairs(recipe_backup) do
-    if data.raw["recipe"][recipe].enabled then
-        data.raw["recipe"]["aai-"..recipe].enabled = true
-        table.remove(recipe_backup, k)
-    end
+local function tech_proto(tech_name)
+    return data.raw["technology"][tech_name]
 end
 
--- First, find the techs that unlock recipes in [recipe_backup].
+if not settings.startup["aaii-cc-early-tech"] then goto early_end end
 
-local tech_repo = {}
+do
+    local tech_list = {
+        "industrial-furnace",
+        "area-mining-drill"
+    }
 
--- tech_repo has this format:
--- ["<recipe name>"] = {<techs that unlock this recipe>}
+    -- sanity
 
-for _, recipe in pairs(recipe_backup) do
-    tech_repo[recipe] = {}
-end
-
-for _, tech in pairs(data.raw["technology"]) do
-    if not tech.effects then
-        goto final
-    end
-
-    for _, effect in pairs(tech.effects) do
-        if not effect.type == "unlock-recipe" then
-            goto skip
+    local error = false
+    for _, tech_name in pairs(tech_list) do
+        if not tech_proto(tech_name) then
+            error = true
+            log("[AAII-CC] WARNING: tech "..tech_name.." not found.")
+            error = true
         end
+    end
 
-        for _, recipe in pairs(recipe_backup) do
-            if effect.recipe == recipe then
-                table.insert(tech_repo[recipe], tech.name)
+    if error == true then
+        goto early_end
+    end
+
+    for _, tech_name in pairs(tech_list) do
+        -- Remove Productivity pack prereq.
+        for k, pre_name in pairs( tech_proto(tech_name).prerequisites ) do
+            if pre_name == "production-science-pack" then
+                table.remove( tech_proto(tech_name).prerequisites, k )
             end
         end
 
-        ::skip::
+        -- Remove Productivity pack usage
+        for k, pack in pairs( tech_proto(tech_name).unit.ingredients ) do
+            if pack[1] == "production-science-pack" then
+                table.remove( tech_proto(tech_name).unit.ingredients, k )
+            end
+        end
+
+        -- Increase unit count
+        tech_proto(tech_name).unit.count = 500
     end
 
-    ::final::
 end
 
--- we can now add the BACKUP versions of recipes
-
-for recipe, list in pairs(tech_repo) do
-    for _, tech in pairs(list) do
-        table.insert(data.raw["technology"][tech].effects, {type = "unlock-recipe", recipe = "aai-"..recipe} )
-    end
-end
+::early_end::
