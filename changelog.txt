@@ -1,8 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 2026-06-06
+  Changes:
+    - Added an alternative assembling machine 3 recipe for Cerys.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2026-06-04
+  Changes:
+    - Added processed fuel to planet hopper's accepeted fuel.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2026-06-02
   Changes:
-    - Undo the old Lignumis compat code which change electronic corcuit in AAI loader recipe to basic circuit boards.
+    - Undo the old Lignumis compat code which change electronic circuit in AAI loader recipe to basic circuit boards.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
