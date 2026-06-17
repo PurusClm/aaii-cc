@@ -1,4 +1,4 @@
-if not settings.startup["aaii-cc-burner-backup"] then goto backup_end end
+-- if not settings.startup["aaii-cc-burner-backup"] then goto backup_end end
 
 do
     ---- Here, we make backup recipes unlocked together with the main recipe.
@@ -17,15 +17,19 @@ do
     -- First, find the techs that unlock recipes in [recipe_backup].
 
     local tech_repo = {}
+    local tech_list = {}
 
     -- tech_repo has this format:
     -- ["<recipe name>"] = {<techs that unlock this recipe>}
 
     for _, recipe in pairs(recipe_backup) do
         tech_repo[recipe] = {}
+        tech_list[recipe] = true
     end
 
-    for _, tech in pairs(data.raw["technology"]) do
+    local technologies = data.raw["technology"]
+
+    for _, tech in pairs(technologies) do
         if not tech.effects then
             goto final
         end
@@ -35,10 +39,10 @@ do
                 goto skip
             end
 
-            for _, recipe in pairs(recipe_backup) do
-                if effect.recipe == recipe then
-                    table.insert(tech_repo[recipe], tech.name)
-                end
+            local recipe = effect.recipe
+
+            if tech_list[recipe] then
+                table.insert(tech_repo[recipe], tech.name)
             end
 
             ::skip::

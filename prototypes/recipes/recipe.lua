@@ -1,4 +1,5 @@
 local meld = require("meld")
+local util = require("__aai-industry__/data-util")
 
 ---- Basics
 
@@ -13,6 +14,34 @@ local function ingred(name, amount)
 end
 
 local recipe_backup = {}
+
+---- Circuit
+-- For "historical" reasons, aai-circuit here is in fact non-AAI circuit.
+
+local aai_circuit = table.deepcopy( data.raw.recipe["electronic-circuit"] )
+local aai_circuit_update = {
+    name = "aai-electronic-circuit",
+    ingredients = {
+        {type = "item", name = "iron-plate", amount = 1},
+        {type = "item", name = "copper-cable", amount = 3}
+    },
+    icons = util.sub_icons(
+        "__base__/graphics/icons/electronic-circuit.png",
+        "__base__/graphics/icons/iron-plate.png"
+    ),
+    surface_conditions = {
+        {property = "stone-avl", max = 2},
+        -- {property = "copper-avl", min = 2}
+    },
+    auto_recycle = false
+}
+
+aai_circuit.icon = nil
+aai_circuit.localised_name = nil
+meld(aai_circuit, aai_circuit_update)
+data:extend({aai_circuit})
+
+table.insert(recipe_backup, "electronic-circuit")
 
 ---- Motor
 

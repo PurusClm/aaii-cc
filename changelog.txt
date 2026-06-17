@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2026-06-17
+  Changes:
+    - Added the backup recipe for vanilla electronic circuit, so you can use it on surfaced where stone cannot be found. This was the reason why I made this mod after all. Special thanks to Linox for reminding me.
+    - Slightly adjusted some of the code.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2026-06-06
   Changes:
