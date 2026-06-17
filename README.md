@@ -14,6 +14,8 @@ Current features include:
 
 - **Recipe backup**: Option to backup some AAI recipes, so if another mod that alters these recipes (eg. Crushing Industry for the concrete) is enabled, AAI versions can be used when the [resource availability](https://mods.factorio.com/mod/availability-sp) is adequate.
 
+    - Now also backsup the vanilla electronic circuit so it can be used on surfaces where the stone is scarce.
+
 - **Recipe reviews**: Adjusted some recipes with some other mods (mainly planets) in mind.
 
 - **Better AAI machines**: Options to buff industrial furnace and area mining drill: the default specs of these machines are sort of awkward compared to those provided by SA and planet mods, especially while considering their costs; this mod thus offers some options, aiming to give players more motivations to craft them, by balancing them to be substitutes to their planet-restricted conterparts (Pelagos calciner and Vulcanus big drill, respectively) that are only slightly worse.
